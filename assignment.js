@@ -3,7 +3,7 @@ function kilometerToMeter(kilometer) {
     if (kilometer < 0 || !Number(kilometer)) {
         return 'Please enter a valid number';
     } else {
-        var meter = kilometer * 1000;
+        var meter = kilometer * 1000; 
         return meter;
     }
 }
@@ -32,16 +32,16 @@ function hotelCost(days) {
         return 'Please enter valid number of days.';
     } else {
         if (days <= 10) {
-            var totalCost = 100 * days;
+            var totalCost = 100 * days; //Total cost up to 10 days.
         } else if (days <= 20) {
             var costUpToTen = 10 * 100;
             var costUpToTwenty = (days - 10) * 80;
-            var totalCost = costUpToTen + costUpToTwenty;
+            var totalCost = costUpToTen + costUpToTwenty; //Total cost up to 20 days.
         } else {
             var costUpToTen = 10 * 100;
             var costUpToTwenty = 10 * 80;
             var costOfRest = (days - 20) * 50;
-            var totalCost = costUpToTen + costUpToTwenty + costOfRest;
+            var totalCost = costUpToTen + costUpToTwenty + costOfRest; //Total cost above 20 days.
         }
         return totalCost;
     }
@@ -53,33 +53,19 @@ function megaFriend(allFriends) {
     if (allFriends.length == 0 || !Array.isArray(allFriends)) {
         return 'Please Insert an Array with names.';
     } else {
-        var allLength = [];
+        var allLength = []; 
         for (var i = 0; i < allFriends.length; i++) {
             var singleLength = allFriends[i].length;
-            allLength.push(singleLength);
+            allLength.push(singleLength);  //Formation of an array with the lrngth mnames.
         }
-        var max = allLength[0];
+        var max = allLength[0]; 
         for (let index = 0; index < allLength.length; index++) {
             if (allLength[index] > max) {
                 max = allLength[index];
-                var megaPosition = index;
+                var megaPosition = index; //Mega name's position identification.
             }
         }
         return allFriends[megaPosition];
     }
 
 }
-
-
-var result = kilometerToMeter(4);
-console.log(result);
-
-var result = budgetCalculator(2, 3, 2);
-console.log(result);
-
-var result = hotelCost(15);
-console.log(result);
-
-var friends = ['Md. Nazimul Islam', 'Abdul Momin', 'Md. Sohel Rana', 'Md. Hafizur Rashid', 'Shuvo Roy', 'Ram Jivan mahato'];
-var largeName = megaFriend(friends);
-console.log(largeName);
