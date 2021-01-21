@@ -1,4 +1,5 @@
-//Kilometer to meter conversion function
+//https://github.com/mh-habib/assignment3
+//Kilometer to meter conversion calculator function
 function kilometerToMeter(kilometer) {
     if (kilometer < 0 || !Number(kilometer)) {
         return 'Please enter a valid number';
@@ -9,7 +10,7 @@ function kilometerToMeter(kilometer) {
 }
 
 
-//Total price calculator for watch, phone and laptop
+//Total budget calculator for watch, phone and laptop
 function budgetCalculator(watch, phone, laptop) {
     if (watch < 0 || phone < 0 || laptop < 0) {
         return 'Please enter valid number of element.'
@@ -62,7 +63,7 @@ function megaFriend(allFriends) {
         for (let index = 0; index < allLength.length; index++) {
             if (allLength[index] > max) {
                 max = allLength[index];
-                var megaPosition  = index;
+                var megaPosition = index;
             }
         }
         return allFriends[megaPosition];
