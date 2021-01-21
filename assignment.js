@@ -1,5 +1,4 @@
-//https://github.com/mh-habib/assignment3
-//Kilometer to meter conversion calculator function
+//1. Kilometer to meter conversion calculator function
 function kilometerToMeter(kilometer) {
     if (kilometer < 0 || !Number(kilometer)) {
         return 'Please enter a valid number';
@@ -10,7 +9,7 @@ function kilometerToMeter(kilometer) {
 }
 
 
-//Total budget calculator for watch, phone and laptop
+//2. Total budget calculator for watch, phone and laptop
 function budgetCalculator(watch, phone, laptop) {
     if (watch < 0 || phone < 0 || laptop < 0) {
         return 'Please enter valid number of element.'
@@ -27,7 +26,7 @@ function budgetCalculator(watch, phone, laptop) {
 }
 
 
-//Total cost for hotel rent
+//3. Total cost for hotel rent
 function hotelCost(days) {
     if (days < 0 || !Number(days) || !Number.isInteger(days)) {
         return 'Please enter valid number of days.';
@@ -49,7 +48,7 @@ function hotelCost(days) {
 }
 
 
-//Find Largest name from array
+//4. Find Largest name from array
 function megaFriend(allFriends) {
     if (allFriends.length == 0 || !Array.isArray(allFriends)) {
         return 'Please Insert an Array with names.';
@@ -75,7 +74,7 @@ function megaFriend(allFriends) {
 var result = kilometerToMeter(4);
 console.log(result);
 
-var result = budgetCalculator(2, -3, 2);
+var result = budgetCalculator(2, 3, 2);
 console.log(result);
 
 var result = hotelCost(15);
